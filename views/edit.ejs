@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Edit Document</title>
+</head>
+<body>
+    <div class="main w-full min-h-screen bg-zinc-900 p-10 text-white">
+        <form action="/edit" method="post">
+            <input type="text" placeholder="Previous Name" class="block px-5 py-2 outline-none bg-zinc-700 text-zinc-500 w-1/4 rounded-lg" name  ="Previous" value="<%=filename%>">
+            <input type="text" placeholder="New Name" class="block px-5 py-2 outline-none bg-zinc-700 w-1/4 mt-3 rounded-lg" name  ="new">
+            
+            <input type="submit" class="mt-3  bg-yellow-500 px-5 py-3 rounded-md" value="Update Name">
+        </form>
+    </div>
+</body>
+</html>
