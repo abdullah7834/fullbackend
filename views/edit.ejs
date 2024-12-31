@@ -3,18 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit User</title>
     <link rel="stylesheet" href="stylesheets/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Edit Document</title>
 </head>
 <body>
-    <div class="main w-full min-h-screen bg-zinc-900 p-10 text-white">
-        <form action="/edit" method="post">
-            <input type="text" placeholder="Previous Name" class="block px-5 py-2 outline-none bg-zinc-700 text-zinc-500 w-1/4 rounded-lg" name  ="Previous" value="<%=filename%>">
-            <input type="text" placeholder="New Name" class="block px-5 py-2 outline-none bg-zinc-700 w-1/4 mt-3 rounded-lg" name  ="new">
-            
-            <input type="submit" class="mt-3  bg-yellow-500 px-5 py-3 rounded-md" value="Update Name">
-        </form>
+  <div class="main w-full min-h-screen bg-zinc-900 ">
+    <div class="form px-10 py-10 text-white">
+        <div class="nav mb-10">
+            <a  class="text-blue-500" href="/read">Read Users</a>
+                    </div> 
+        <h1 class="text-3xl tracking-tighter mb-3">Update User</h1>
+<form action="/update/<%= user._id %>" method="post">
+    <input type="text" placeholder="Enter Name" class="block  px-5 py-3 outline-none bg-zinc-700 w-1/4 rounded-lg " name  ="name" value="<%= user.name%>">
+    <input type="email" placeholder="Enter Email here" class="block px-5 py-3 outline-none bg-zinc-700 w-1/4 rounded-lg mt-3 " name  ="email" value="<%= user.email%>">
+    <input type="text" placeholder="gave your imageurl" class="block px-5 py-3 outline-none bg-zinc-700 w-1/4 rounded-lg mt-3" name  ="imageurl" value="<%= user.imageurl%>">
+    
+    <input type="submit" class="mt-3  bg-yellow-500 text-black px-5 py-3 rounded-md" value="Update User ">
+</form>
     </div>
+  </div>
+
+    <script src="javascripts/script.js"></script>
 </body>
-</html>
+</html
